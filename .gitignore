@@ -1,0 +1,7 @@
+node_modules
+salida.m*js
+ast.json
+.nyc_out*
+src/calc.js
+test/data/out*.js
+.DS_Store

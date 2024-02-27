@@ -1,0 +1,39 @@
+{
+  "name": "hello-jison",
+  "version": "1.0.0",
+  "description": "A simple calculator written in Jison",
+  "type": "commonjs",
+  "bin": {
+    "calc2js": "./bin/calc2js.js"
+  },
+  "scripts": {
+    "test": "npm run compile; mocha test/test.mjs",
+    "only-test": "mocha --inspect-brk only-test/test.js",
+    "cov": "nyc npm test",
+    "test1": "npm run compile; ./bin/calc2js.mjs test/data/test1.calc ",
+    "compile": "jison src/grammar.jison src/lexer.l -o src/calc.js",
+    "clean": "rm -f src/calc.js; rm -fR test/data/out?.js"
+  },
+  "keywords": [
+    "ull",
+    "jison",
+    "espree",
+    "compiler"
+  ],
+  "author": "Casiano Rodriguez Leon <crguezl@ull.edu.es> (https://crguezl.github.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "ast-types": "^0.14.2",
+    "chmod": "^0.2.1",
+    "commander": "^10.0.0",
+    "complex.js": "^2.1.1",
+    "jison": "^0.4.18",
+    "recast": "^0.22.0",
+    "set-operations": "^2.0.2",
+    "shelljs.exec": "^1.1.8"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "shelljs": "^0.8.5"
+  }
+}
