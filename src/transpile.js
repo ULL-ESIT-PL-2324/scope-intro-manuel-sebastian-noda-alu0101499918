@@ -3,7 +3,7 @@ const {deb} = require('./deb.js');
 const { difference, notDeclared } = require('./utils.js');
 const p = require("./calc").parser;
 const fs = require('fs/promises');
-const { initializedVariables, dependencies, usedVariables } = require('./scope.js');
+const { dependencies, scopeAnalysis} = require('./scope.js');
 const codeGen = require('./code-generation.js')
 const writeCode = require('./write-code.js');
 
@@ -22,16 +22,8 @@ module.exports = async function transpile(inputFile, outputFile) {
   //process.exit(0);
   
   ast = dependencies(ast);
-  ast = initializedVariables(ast);
-  ast = usedVariables(ast);
-  let d = difference(ast.used, ast.symbolTable)
-  if (d.size > 0) { 
-    let m = notDeclared(d).join('');
-    console.error(m);
-    return m;
-  }
-  //console.error("= AST = \n"+ deb(ast));
-  
+  ast = scopeAnalysis(ast);
+
   let output = codeGen(ast);
   
   debugger;

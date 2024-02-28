@@ -1,16 +1,3 @@
 #!/usr/bin/env node
-const Complex = require("/Users/casiano/campus-virtual/2223/pl2223/practicas/scope-intro/scope-intro-solution/src/complex.js");  
-const print = x => { console.log(x); return x; };
-const factorial = function(num) {
-  if (num.im !== 0) throw new Error(`Imaginary part must be zero. Instead is ${num.im}`);
-  let n = num.re;
-  if (!Number.isInteger(n)) throw new Error(`Not an Integer number ${n}`);
-  if ( n < 0) throw new Error(`Factorial of negative number ${n}`);
-  let result = Complex(1);
-  if (n === 0) return result;
-  for (let i = 1; i <= n; i++) {
-    result = result.mul(i);
-  }
-  return Complex({re: result.re, im: num.im});
-};
+const {print, factorial, Complex } = require("/home/usuario/practicas/practica_4/scope-intro-manuel-sebastian-noda-alu0101499918/src/support-lib.js");
 print(factorial(Complex("3")).sub(Complex("1")));

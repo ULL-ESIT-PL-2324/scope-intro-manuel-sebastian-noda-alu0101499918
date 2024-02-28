@@ -1,3 +1,4 @@
 #!/usr/bin/env node
 const {Complex, print } = require("/home/usuario/practicas/practica_4/scope-intro-manuel-sebastian-noda-alu0101499918/src/support-lib.js");
-Complex("4").add(Complex("2")), print(Complex("2").pow(Complex("3")));
+let $a, $b;
+($a = Complex("4").add($d).add(Complex("i")), $b = Complex("2").sub(Complex("2i"))), print($c);

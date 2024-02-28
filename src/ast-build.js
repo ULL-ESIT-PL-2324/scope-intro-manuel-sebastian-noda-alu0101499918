@@ -6,7 +6,7 @@ function buildRoot(child) {
     body: [
       {
         type: "ExpressionStatement",
-        expressions: child,
+        expression: child,
 
       },
     ],

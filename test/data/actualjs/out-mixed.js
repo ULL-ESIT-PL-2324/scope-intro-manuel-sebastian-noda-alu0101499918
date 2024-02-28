@@ -1,4 +1,3 @@
 #!/usr/bin/env node
-const Complex = require("/Users/casianorodriguezleon/campus-virtual/2223/pl2223/practicas/drafts/scope-intro-template/src/complex.js");  
-const print = x => { console.log(x); return x; };
+const {print, Complex } = require("/home/usuario/practicas/practica_4/scope-intro-manuel-sebastian-noda-alu0101499918/src/support-lib.js");
 print(Complex("1").neg().pow(Complex("0.5")));

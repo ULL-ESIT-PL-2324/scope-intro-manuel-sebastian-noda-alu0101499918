@@ -71,5 +71,33 @@ export default [
     "actualjs": "out-exp-fact.js",
     "expectedjs": "correct-exp-fact.js",
     "expectedout": "correct-out-exp-fact.txt"
-  }
+  },
+  {
+    "input": "test3.calc",
+    "actualjs": "out3.js",
+    "expectedjs": "correct3.js",
+    "expectedout": "correct-out3.txt"
+  },
+  {
+    "input": "test-id.calc",
+    "actualjs": "out-id.js",
+    "expectedjs": "correct-id.js",
+    "expectedout": "correct-out-id.txt"
+  },
+  {
+    "input": "test-fact-fact.calc",
+    "actualjs": "out-fact-fact.js",
+    "expectedjs": "correct-fact-fact.js",
+    "expectedout": "correct-out-fact-fact.txt"
+  },
+  {
+    "input": "test-comma.calc",
+    "actualjs": "out-comma.js",
+    "expectedjs": "correct-comma.js",
+    "expectedout": "correct-out-comma.txt"
+  },
+
+
+
+
 ];
