@@ -1,10 +1,10 @@
 const recast = require("recast");
 const Support = require("./support-lib.js");
-
+const SupportNames = Object.keys(Support);
 const template = (name, fun) => `const ${name} = ${fun.toString()};\n`;
 const path = require('path');
 
-function buildSupportCode(dependencies) {
+function buildSupportCode(dependencies=SupportNames) {
   let code = '';
   for (let name of dependencies) {
     code += template(name, Support[name]);

@@ -37,5 +37,6 @@ module.exports = {
   print,
   factorial,
   max,
-  min
+  min,
+  Complex
 };

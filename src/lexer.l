@@ -1,13 +1,18 @@
 %{
 const reservedWords = ["print","i"]  
 
-const idOrReserved = text => {/* fill the code */  }
+const idOrReserved = text => {
+  if(reservedWords.find( w => w == text)) return 'PID';
+  return 'ID';
+ }
 %}
-number /* fill the code */
+number (\d+(\.?\d+)?([eE][-+]?\d+)?"i"?)|"i"
 
 %%
-\s+            /* skip whites */;
+\s+                      ;
+"#".*                    ;
+\/\*(.|\n)*?\*\/         ;
 {number}       return 'N';
-[a-zA-Z_]\w*   return /* fill the code */; 
+[a-zA-Z_]\w*   return idOrReserved(yytext); 
 '**'           return '**';
 [-=+*/!(),@&]  return yytext;

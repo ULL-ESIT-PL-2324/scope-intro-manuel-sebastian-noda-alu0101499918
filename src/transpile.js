@@ -20,7 +20,7 @@ module.exports = async function transpile(inputFile, outputFile) {
   }
   //console.log(JSON.stringify(ast, null, 2))
   //process.exit(0);
-
+  
   ast = dependencies(ast);
   ast = initializedVariables(ast);
   ast = usedVariables(ast);
@@ -31,7 +31,7 @@ module.exports = async function transpile(inputFile, outputFile) {
     return m;
   }
   //console.error("= AST = \n"+ deb(ast));
-
+  
   let output = codeGen(ast);
   
   debugger;

@@ -25,7 +25,8 @@
   "dependencies": {
     "ast-types": "^0.14.2",
     "chmod": "^0.2.1",
-    "commander": "^10.0.0",
+    "comander": "^0.0.1-security",
+    "commander": "^10.0.1",
     "complex.js": "^2.1.1",
     "jison": "^0.4.18",
     "recast": "^0.22.0",

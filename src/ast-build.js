@@ -1,12 +1,25 @@
 const {$} = require('./utils.js')
 
 function buildRoot(child) {
-  /* fill the code here */
+  return{
+    type: "Program",
+    body: [
+      {
+        type: "ExpressionStatement",
+        expressions: child,
+
+      },
+    ],
+    sourceType: "script",
+  };
 }
 
 function buildLiteral(value) {
-  /* fill the code here */
-  // Recast compatibility!! escodegen does not need the extra quotes
+ return{
+  type: "Literal",
+  value: String(value),
+  raw: `"${value}"`,
+ };
 }
 
 

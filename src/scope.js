@@ -16,7 +16,8 @@ const patternIsSupport = new RegExp(functionNames.join('|'));
 
 // Detect what support functions are used: dependency analysis
 function dependencies(dAst) {
-    /* fill the code here */
+    const functionNames = Object.keys(require("./support-lib.js"));
+    
 }
 
 // Builds the set of variables that are initialized in the program

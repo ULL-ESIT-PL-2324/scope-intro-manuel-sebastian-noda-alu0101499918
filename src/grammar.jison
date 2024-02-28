@@ -15,6 +15,8 @@ const {$} = require('./utils.js')
 %}
 
 /* add remaining precedences */
+%left ','
+%right '='
 %left '@'
 %left '&'
 %left '-' '+'
@@ -27,7 +29,9 @@ es: e { return { ast: buildRoot($e) }; }
 ;
 
 e: 
-   /* rules for assignment, comma, print, ids */
+ 
+   e ',' e              { $$ = buildSequenceExpression([$e1, $e2]); }
+  | ID '=' e            { $$ = buildAssignmentExpression($($ID),'=',$e); }
   | e '@' e             { $$ = buildMax($e1, $e2, true); }
   | e '&' e             { $$ = buildMin($e1, $e2, true); }
 
@@ -39,6 +43,8 @@ e:
   | '(' e ')'           { $$ = $2; }
   | '-' e %prec UMINUS  { $$ = buildCallMemberExpression($e, 'neg', []); }
   | e '!'               { $$ = buildCallExpression('factorial', [$e], true); }
+  |PID '(' e ')'        { $$ = buildCallExpression($PID, [$e], true);}
+  | ID                  { $$ = buildIdentifier($($ID)); }
   | N                   { $$ = buildCallExpression('Complex',[buildLiteral($N)], true); }
   
 ;
