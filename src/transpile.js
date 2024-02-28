@@ -7,6 +7,14 @@ const { dependencies, scopeAnalysis} = require('./scope.js');
 const codeGen = require('./code-generation.js')
 const writeCode = require('./write-code.js');
 
+/**
+ * @module transpile
+ * @description Este módulo proporciona una función asincrónica para transpilar código de entrada a un nuevo archivo de salida.
+ * @param {string} inputFile - La ruta del archivo de entrada.
+ * @param {string} outputFile - La ruta del archivo de salida.
+ * @returns {Promise<string>} - Una promesa que se resuelve con el código transpilado si tiene éxito, o se rechaza con un mensaje de error si falla.
+ */
+
 module.exports = async function transpile(inputFile, outputFile) {
   let input = await fs.readFile(inputFile, 'utf-8')
   let ast;

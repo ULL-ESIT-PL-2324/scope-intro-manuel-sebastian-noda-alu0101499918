@@ -1,3 +1,9 @@
+/**
+ * @module analysis
+ * @description Este módulo proporciona funciones para el análisis de dependencias
+ *   y análisis de alcance en código JavaScript.
+ */
+
 const { $, dast2json } = require('./utils.js')
 const deb = require('./deb.js');
 
@@ -10,6 +16,11 @@ const {
 const astTypes = require("ast-types");
 const visit = astTypes.visit;
 
+/**
+ * Detecta qué funciones de soporte se utilizan mediante análisis de dependencias.
+ * @param {Object} dAst - El árbol sintáctico dinámico del código.
+ * @returns {Object} - El árbol sintáctico dinámico con información de dependencias actualizada.
+ */
 // Detect what support functions are used: dependency analysis
 function dependencies(dAst) {
     const functionNames = Object.keys(require("./support-lib.js"));
@@ -27,6 +38,12 @@ function dependencies(dAst) {
     });
     return dAst;
 }
+
+/**
+ * Realiza un análisis de alcance en el código para detectar variables no declaradas y agregar declaraciones de variable necesarias.
+ * @param {Object} dAst - El árbol sintáctico dinámico del código.
+ * @returns {Object} - El árbol sintáctico dinámico con información de alcance actualizada.
+ */
 
 const scopeAnalysis = (dAst) => {
   const Scope = require('./scope-class.js');
