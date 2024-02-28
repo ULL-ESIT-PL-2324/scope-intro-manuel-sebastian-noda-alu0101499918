@@ -175,9 +175,13 @@ let $a, $b;
   ✔ transpile(test-id.calc, out-id.js) (No errors: true) (74ms)
 
   ✔ transpile(test-fact-fact.calc, out-fact-fact.js) (No errors: true) (56ms)
-  
+
   ✔ transpile(test-comma.calc, out-comma.js) (No errors: true) (73ms)
 
   16 passing (1s)
 # Se añade un estudio de cubrimiento de las pruebas (coverage) y se ha publicado en GitHub pages
   ![tabla](practica_imagenes/tabla.png)
+
+# Se ha añadido el enlace a las GH pages en el "About" del repo
+
+ [enlace](https://ull-esit-pl-2324.github.io/scope-intro-manuel-sebastian-noda-alu0101499918/)
