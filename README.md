@@ -121,35 +121,61 @@ let $a, $b;
 # El package.json tiene scripts para ejecutar el programa
 
   "dependencies": {
+
     "ast-types": "^0.14.2",
+
     "chmod": "^0.2.1",
+
     "comander": "^0.0.1-security",
+
     "commander": "^10.0.1",
+
     "complex.js": "^2.1.1",
+
     "jison": "^0.4.18",
+
     "nyc": "^15.1.0",
+
     "recast": "^0.22.0",
+
     "set-operations": "^2.0.2",
+
     "shelljs.exec": "^1.1.8"
+
   },
 
 # Ha añadido tests suficientes
 
-   ✔ transpile(test-scope1.calc, out-scope1.js) (No errors: false)
+  ✔ transpile(test-scope1.calc, out-scope1.js) (No errors: false)
+
   ✔ transpile(test1.calc, out1.js) (No errors: true) (88ms)
+
   ✔ transpile(test2.calc, out2.js) (No errors: true) (69ms)
+
   ✔ transpile(test-scope2.calc, out-scope2.js) (No errors: true) (70ms)
+
   ✔ transpile(test-power-power.calc, out-power-power.js) (No errors: true) (72ms)
+
   ✔ transpile(test-print.calc, out-print.js) (No errors: true) (80ms)
+
   ✔ transpile(test-assign1.calc, out-assign1.js) (No errors: true) (73ms)
+
   ✔ transpile(test-maxmin.calc, out-maxmin.js) (No errors: true) (73ms)
+
   ✔ transpile(test4.calc, out4.js) (No errors: true) (55ms)
+
   ✔ transpile(test-mixed.calc, out-mixed.js) (No errors: true) (71ms)
+
   ✔ transpile(test-exp.calc, out-exp.js) (No errors: true) (73ms)
+
   ✔ transpile(test-exp-fact.calc, out-exp-fact.js) (No errors: true) (74ms)
+
   ✔ transpile(test3.calc, out3.js) (No errors: true) (70ms)
+
   ✔ transpile(test-id.calc, out-id.js) (No errors: true) (74ms)
+
   ✔ transpile(test-fact-fact.calc, out-fact-fact.js) (No errors: true) (56ms)
+  
   ✔ transpile(test-comma.calc, out-comma.js) (No errors: true) (73ms)
 
   16 passing (1s)
