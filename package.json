@@ -29,6 +29,7 @@
     "commander": "^10.0.1",
     "complex.js": "^2.1.1",
     "jison": "^0.4.18",
+    "nyc": "^15.1.0",
     "recast": "^0.22.0",
     "set-operations": "^2.0.2",
     "shelljs.exec": "^1.1.8"
