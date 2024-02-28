@@ -179,3 +179,5 @@ let $a, $b;
   ✔ transpile(test-comma.calc, out-comma.js) (No errors: true) (73ms)
 
   16 passing (1s)
+# Se añade un estudio de cubrimiento de las pruebas (coverage) y se ha publicado en GitHub pages
+  ![tabla](practica_imagenes/tabla.png)
